@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Run Python Script') {
             steps {
-                echo 'Running hello.py...'
-                sh 'python3 hello.py'
+                echo 'Running test.py...'
+                sh 'python3 test.py'
             }
         }
     }
