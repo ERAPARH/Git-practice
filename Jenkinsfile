@@ -1,19 +1,18 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Clone Repository'){
-            steps{
-                echo 'Cloning Repository...'
-                // Git repo se code pull kro 
-                git branch: 'main', https://github.com/ERAPARH/Git-practice
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo 'Cloning repository...'
+                git branch: 'main', url: 'https://github.com/ERAPARH/Git-practice.git'
             }
         }
 
-        stage('Run Python script'){
-            steps{
+        stage('Run Python Script') {
+            steps {
                 echo 'Running hello.py...'
-                sh 'python3 hello.py' 
-                
+                sh 'python3 hello.py'
             }
         }
     }
